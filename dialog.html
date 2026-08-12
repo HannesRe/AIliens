@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f0c29">
+  <title>Mission Brief - Real or Fake? AI Challenge</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="pwa-icon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ai_agent.css">
+</head>
+<body class="dialog-page">
+  <div class="particles"></div>
+  <div class="container dialog-container animate__animated animate__fadeIn">
+
+    <div class="agent-callout dialog-callout" aria-label="Mission briefing from the game assistant">
+      <img src="Agent_MIB.png" alt="Game agent" class="agent-image agent-image-dialog">
+      <div class="speech-bubble" data-i18n="dialog.agentMessage" data-i18n-html="true"></div>
+    </div>
+
+      <button id="continue-btn" class="glow-on-hover">
+        <span class="btn-text" data-i18n="dialog.continue">CONTINUE</span>
+        <span class="btn-arrow">→</span>
+      </button>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="dialog-script.js"></script>
+</body>
+</html>

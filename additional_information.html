@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f0c29">
+  <title>Learn About Photos</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="pwa-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="additional_information.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="background-animation"></div>
+  <div class="container">
+    <h1 data-i18n="learning.title">Photo Learning Center</h1>
+    
+    <div class="image-viewer">
+      <div class="image-container">
+        <button class="nav-btn" id="prev-btn"><i class="fas fa-chevron-left"></i></button>
+        <img id="featured-image" src="LearningFakeImage/1.jpg" alt="Learning Image">
+        <button class="nav-btn" id="next-btn"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+    
+    <div class="learning-options">
+      <div class="option-card" data-topic="detection">
+        <div class="card-icon"><i class="fas fa-search"></i></div>
+        <h3 data-i18n="learning.card1.title">Detect Fake Photos</h3>
+        <p data-i18n="learning.card1.body">Learn techniques to identify manipulated images.</p>
+      </div>
+      
+      <div class="option-card" data-topic="ethics">
+        <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
+        <h3 data-i18n="learning.card2.title">Photo Ethics</h3>
+        <p data-i18n="learning.card2.body">Understand ethical considerations in photo editing.</p>
+      </div>
+    </div>
+    <div class="learning-options">
+      <div class="option-card" data-topic="tools">
+        <div class="card-icon"><i class="fas fa-tools"></i></div>
+        <h3 data-i18n="learning.card3.title">Editing Tools</h3>
+        <p data-i18n="learning.card3.body">Discover tools used to create fake photos.</p>
+      </div>
+      
+      <div class="option-card" data-topic="history">
+        <div class="card-icon"><i class="fas fa-history"></i></div>
+        <h3 data-i18n="learning.card4.title">Manipulation History</h3>
+        <p data-i18n="learning.card4.body">Explore how photo manipulation has evolved.</p>
+      </div>
+    </div>
+    
+    <div id="detection-info" class="info-section">
+      <h2 data-i18n="learning.section1.title"><i class="fas fa-search"></i> How to Detect Fake Photos</h2>
+      <p data-i18n="learning.section1.body">Here are some techniques to help identify manipulated images:</p>
+      <ul>
+        <li data-i18n="learning.section1.item1"><strong>Check the edges:</strong> Look for blurry or irregular edges around objects.</li>
+        <li data-i18n="learning.section1.item2"><strong>Examine shadows:</strong> Inconsistent shadow directions can reveal manipulation.</li>
+        <li data-i18n="learning.section1.item3"><strong>Look for pixelation:</strong> Areas that have been edited might show unusual pixel patterns.</li>
+        <li data-i18n="learning.section1.item4"><strong>Check metadata:</strong> Image metadata can sometimes reveal editing software used.</li>
+        <li data-i18n="learning.section1.item5"><strong>Reverse image search:</strong> Search for the image online to find original versions.</li>
+      </ul>
+    </div>
+    
+    <div id="ethics-info" class="info-section">
+      <h2 data-i18n="learning.section2.title"><i class="fas fa-balance-scale"></i> Photo Ethics</h2>
+      <p data-i18n="learning.section2.body">Photo manipulation raises important ethical questions:</p>
+      <ul>
+        <li data-i18n="learning.section2.item1"><strong>Journalism:</strong> News photos should never be manipulated in ways that change their meaning.</li>
+        <li data-i18n="learning.section2.item2"><strong>Advertising:</strong> Many countries have regulations about digital alterations.</li>
+        <li data-i18n="learning.section2.item3"><strong>Social media:</strong> Filters and edits can create unrealistic beauty standards.</li>
+        <li data-i18n="learning.section2.item4"><strong>Historical photos:</strong> Altering historical images can distort our understanding of the past.</li>
+      </ul>
+    </div>
+    
+    <div id="tools-info" class="info-section">
+      <h2 data-i18n="learning.section3.title"><i class="fas fa-tools"></i> Common Editing Tools</h2>
+      <p data-i18n="learning.section3.body">These are some of the most frequently used tools for photo manipulation:</p>
+      <ul>
+        <li data-i18n="learning.section3.item1"><strong>Adobe Photoshop:</strong> The industry standard for professional image editing.</li>
+        <li data-i18n="learning.section3.item2"><strong>GIMP:</strong> A free and open-source alternative to Photoshop.</li>
+        <li data-i18n="learning.section3.item3"><strong>FaceApp:</strong> Specializes in facial transformations and aging effects.</li>
+        <li data-i18n="learning.section3.item4"><strong>Deepfake software:</strong> Uses AI to create realistic face swaps in videos.</li>
+        <li data-i18n="learning.section3.item5"><strong>Lightroom:</strong> Primarily for color correction but can be used for manipulation.</li>
+      </ul>
+    </div>
+    
+    <div id="history-info" class="info-section">
+      <h2 data-i18n="learning.section4.title"><i class="fas fa-history"></i> History of Photo Manipulation</h2>
+      <p data-i18n="learning.section4.body">Photo manipulation is nearly as old as photography itself:</p>
+      <ul>
+        <li data-i18n="learning.section4.item1"><strong>1800s:</strong> Early photographers created "spirit photos" by combining negatives.</li>
+        <li data-i18n="learning.section4.item2"><strong>1920s-30s:</strong> Stalin's regime altered photos to remove purged officials.</li>
+        <li data-i18n="learning.section4.item3"><strong>1980s:</strong> Digital editing began with programs like Photoshop.</li>
+        <li data-i18n="learning.section4.item4"><strong>2000s:</strong> Social media made photo filters widely accessible.</li>
+        <li data-i18n="learning.section4.item5"><strong>2010s-present:</strong> AI-powered tools made manipulation more sophisticated.</li>
+      </ul>
+    </div>
+    
+    <button class="back-btn" id="back-btn" data-i18n="learning.back">Continue <i class="fas fa-arrow-right"></i></button>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="additional_information.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f0c29">
+  <title>Real or Fake? AI Challenge</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="pwa-icon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ai_agent.css">
+  <link rel="stylesheet" href="footer_links.css">
+</head>
+<body class="index-page">
+  <div class="container animate__animated animate__fadeIn">
+    <div class="title-box">
+      <h1 class="animate__animated animate__bounceIn" data-i18n="index.title">REAL<span>or</span>FAKE?</h1>
+    </div>
+    
+    <p class="subtitle" data-i18n="index.subtitle">Can you spot AI-generated images?</p>
+    <div class ="imagebox"></div>
+    
+    <button class = "std_btn" id="start-btn">
+      <span class="btn-text" data-i18n="index.playNow">PLAY NOW</span>
+      <span class="btn-arrow">→</span>
+    </button>
+        <button class = "std_btn" id ="tut-btn">
+      <span class="btn-text" data-i18n="index.howToPlay">HOW TO PLAY</span>
+      <span class="btn-arrow">→</span>
+    </button>
+
+    <div class="footer-links footer-controls">
+      <a href="about.html" class="footer-link" data-i18n="index.aboutUs">About Us</a>
+      <div class="language-switcher">
+        <label for="language-select" class="language-label" data-i18n="language.label">Language</label>
+        <select id="language-select" class="language-select" aria-label="Language selector">
+          <option value="en" data-i18n="language.en">English</option>
+          <option value="de" data-i18n="language.de">Deutsch</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

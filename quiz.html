@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f0c29">
+  <title>Quiz Game</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="pwa-icon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="quiz-style.css">
+  <link rel="stylesheet" href="ai_agent.css">
+</head>
+<body class="quiz-page">
+
+  <div class="quiz-container">
+
+    <div class="agent-callout-small" aria-label="Game assistant message">
+      <img src="Agent_MIB.png" alt="Game agent" class="agent-image">
+      <div class="speech-bubble" data-i18n="quiz.agentMessage">blablabla</div>
+    </div>
+
+    <div class="navigation-wrapper">
+      <div id="progress-bar" class="progress-bar">
+        <div id="progress-bar-filled"></div>
+      </div>
+    </div>
+
+    <img id="quiz-image" src="" alt="Quiz Image">
+    
+    
+    <div class="buttons-container quiz-answer-container" id="answer-container">
+      <button class="answer-btn quiz-answer-btn" id="real-btn" data-i18n="quiz.real">Real</button>
+      <button class="answer-btn quiz-answer-btn" id="fake-btn" data-i18n="quiz.fake">Fake</button>
+    </div>
+
+    <div class="confidence-header">
+      <span class="confidence-boundary">100%</span>
+      <h3 id="confidence-h3" data-i18n="quiz.confidence">confidence</h3>
+      <span class="confidence-boundary">0%</span>
+    </div>
+    <div class="confidence-container" id="confidence-container">
+      <div class="slider-wrapper">
+        <input type="range" id="confidence-slider" min="0" max="100" value="50" class="confidence-slider">
+      </div>
+    </div>
+    <button class="next-btn" id="submit-btn" data-i18n="quiz.next">Next</button>
+   
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="i18n.js"></script>
+  <script src="quiz.js"></script>
+</body>
+</html>

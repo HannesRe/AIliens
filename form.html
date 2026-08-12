@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f0c29">
+    <title>Player Registration</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="pwa-icon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form-style.css">
+    <link rel="stylesheet" href="ai_agent.css">
+</head>
+<body class="form-page">
+    <div class="particles"></div>
+    <div class="form-container">
+        <!-- <h2 data-i18n="form.title">Enter Your Details</h2> -->
+        <div class="agent-callout" aria-label="Game assistant message">
+                <img src="Agent_MIB.png" alt="Game agent" class="agent-image">
+            <div class="speech-bubble" data-i18n="form.agentMessage"></div>
+        </div>
+        <div class="checkbox-container">
+            <input type="checkbox" id="played-before" name="played-before">
+            <label for="played-before" class="checkbox-label" data-i18n="form.playedBefore"></label>
+        </div>
+
+        <label data-i18n="form.ageLabel" data-i18n-html="true">Select Your Age Group: <span class="required">*</span></label>
+        <div class="age-buttons">
+            <button type="button" class="age-btn" data-age="10-25">10-25</button>
+            <button type="button" class="age-btn" data-age="26-45">26-45</button>
+            <button type="button" class="age-btn" data-age="46-65">46-65</button>
+            <button type="button" class="age-btn" data-age="66-99">66-99+</button>
+        </div>
+        <input type="hidden" id="age" required>
+
+        <div class="button-group">
+            <button type="submit" id="submit-btn-short" class="std_btn" data-i18n="form.shortGame">Short Game</button>
+            <button type="submit" id="submit-btn-long" class="std_btn" data-i18n="form.longGame">Long Game</button>
+        </div>
+    </div>
+
+    <script src="i18n.js"></script>
+    <script src="form-validation.js"></script>
+</body>
+</html>

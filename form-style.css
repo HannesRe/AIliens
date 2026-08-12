@@ -1,0 +1,252 @@
+/* Base Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #0f0c29, #302b63);
+  min-height: 100svh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: #fff;
+  padding: 20px;
+}
+
+.form-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100svh;
+  padding: 20px;
+}
+
+/* Form Container */
+.form-container {
+  background: rgba(15, 12, 41, 0.95);
+  backdrop-filter: blur(5px);
+  padding: 25px;
+  border-radius: 15px;
+  width: 85%;
+  max-width: 350px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Title */
+.form-container h2 {
+  font-size: 1.8rem;
+  margin: 0 0 25px 0;
+  background: linear-gradient(45deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -1px;
+}
+
+/* Form Labels */
+label {
+  display: block;
+  text-align: left;
+  margin: 20px 0 8px 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+/* Uniform Input Styling */
+input:not([type="checkbox"]), select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  -webkit-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  height: 48px;
+  line-height: 24px;
+}
+
+/* Submit Button Group */
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+/* Age Buttons */
+.age-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.age-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  flex: 1;
+  min-width: 70px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.age-btn:hover {
+  border-color: #ff8a00;
+  background: rgba(255, 138, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.age-btn.active {
+  background: linear-gradient(45deg, #ff8a00, #e52e71);
+  border: none;
+  box-shadow: 0 6px 20px rgba(229, 46, 113, 0.5);
+  transform: translateY(-3px);
+}
+
+/* Checkbox Container */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  justify-content: flex-start;
+}
+
+#played-before {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #ff8a00;
+  flex-shrink: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+#played-before:hover {
+  border-color: #ff8a00;
+  background: rgba(255, 138, 0, 0.1);
+}
+
+#played-before:checked {
+  background: linear-gradient(45deg, #ff8a00, #e52e71);
+  border-color: #ff8a00;
+}
+
+.checkbox-label {
+  margin: 0;
+  text-align: left;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 20px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 14px;
+    align-items: flex-start;
+  }
+
+  .form-page {
+    align-items: center;
+  }
+
+  .form-container {
+    width: min(100%, 480px);
+    padding: 20px;
+  }
+
+  .age-buttons {
+    flex-wrap: wrap;
+  }
+
+  .age-btn {
+    min-width: calc(50% - 4px);
+    flex: 1 1 calc(50% - 4px);
+  }
+
+  .checkbox-container {
+    margin: 14px 0 10px;
+  }
+
+  .age-buttons {
+    margin-bottom: 14px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    margin-top: 12px;
+    gap: 10px;
+  }
+
+  .button-group button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .form-container {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .form-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+  }
+
+  .age-buttons {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .age-btn {
+    min-width: 100%;
+    flex-basis: 100%;
+    height: 46px;
+    font-size: 0.85rem;
+  }
+
+  .checkbox-container {
+    align-items: flex-start;
+    margin: 12px 0 8px;
+  }
+
+  .button-group {
+    margin-top: 10px;
+    gap: 8px;
+  }
+
+  .button-group button {
+    min-height: 50px;
+  }
+}
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f0c29">
+  <title>How to Play - Real or Fake? AI Challenge</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="pwa-icon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="numbered_list.css">
+  <link rel="stylesheet" href="style.css">
+
+  
+  
+</head>
+<body>
+  <div class="particles"></div>
+  <div class="container animate__animated animate__fadeIn">
+    <div class="title-box">
+      <h1 class="animate__animated animate__bounceIn">HOW TO<span>PLAY</span></h1>
+      <div class="pulse-circle"></div>
+    </div>
+     
+    <div class="steps-container">
+      <div class="step-card animate__animated animate__fadeInUp">
+        <div class="step-number">1</div>
+        <h3 data-i18n="tutorial.step1.title">Start the Quiz</h3>
+        <p data-i18n="tutorial.step1.body" data-i18n-html="true">Before you can begin, we need your approximate age and a few other details. <span style="color: #e52e71;">*</span></p>
+      </div>
+
+      <div class="step-card animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
+        <div class="step-number">2</div>
+        <h3 data-i18n="tutorial.step2.title">Analyze the Image</h3>
+        <p data-i18n="tutorial.step2.body">You will be shown pictures of people. Decide whether you think they are real photographs of people or whether they are AI-generated. Select the appropriate button.Please also tell us how sure you are by using the slider.</p>
+      </div>
+
+      <div class="step-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+        <div class="step-number">3</div>
+        <h3 data-i18n="tutorial.step3.title">Make Your Choice</h3>
+        <p data-i18n="tutorial.step3.body">You will then receive a short tutorial on how to better recognize Ki images.</p>
+      </div>
+
+      <div class="step-card animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
+        <div class="step-number">4</div>
+        <h3 data-i18n="tutorial.step4.title">Confidence Level</h3>
+        <p data-i18n="tutorial.step4.body">Please use your newly acquired knowledge to reassess whether the portraits are AI-generated.</p>
+      </div>
+    </div>
+
+    <div class="tips-section">
+      <h3 data-i18n="tutorial.expect.title">📋 What to Expect</h3>
+        <p data-i18n="tutorial.expect.body" data-i18n-html="true">This game is part of a survey conducted by the SES laboratory at OTH Regensburg. With this game, we want to measure how well AI-generated images can be distinguished from real ones. In order to differentiate these statistics by age, we need to know your age. If you would like to know more about this project, click <a href="about.html" style="color: #e52e71; text-decoration: none; font-weight: 600;">here</a>.</p>
+    </div>
+
+    <div class="buttons-section">
+      <button id="back-btn" class="glow-on-hover secondary-btn">
+        <span class="btn-arrow">←</span>
+        <span class="btn-text" data-i18n="tutorial.back">BACK</span>
+      </button>
+      <button id="play-btn" class="glow-on-hover">
+        <span class="btn-text" data-i18n="tutorial.play">START PLAYING</span>
+        <span class="btn-arrow">→</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="tutorial-script.js"></script>
+</body>
+</html>

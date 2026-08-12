@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f0c29">
+  <title>Phasen Uebersicht</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="pwa-icon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="phase-summary.css">
+  <link rel="stylesheet" href="ai_agent.css">
+</head>
+<body>
+  <div class="summary-container">
+    <h1 data-i18n="summary.title">Abschluss Uebersicht</h1>
+    <p class="subtitle" data-i18n="summary.subtitle">Ergebnisse aus Quiz Phase 1, Training und Quiz Phase 2</p>
+
+    <div class="agent-callout" aria-label="Game assistant message">
+            <img src="Agent_MIB.png" alt="Game agent" class="agent-image">
+        <div class="speech-bubble" data-i18n="summary.agentMessage"></div>
+    </div>
+
+    <div class="summary-grid">
+      <article class="summary-card" id="phase1-card">
+        <h2 data-i18n="summary.phase1">Phase 1 Quiz</h2>
+        <p class="metric" id="phase1-score">-</p>
+        <p class="detail" id="phase1-detail" data-i18n="summary.noData">Keine Daten</p>
+      </article>
+
+      <article class="summary-card" id="training-card">
+        <h2 data-i18n="summary.training">Training</h2>
+        <p class="metric" id="training-score">-</p>
+        <p class="detail" id="training-detail" data-i18n="summary.noData">Keine Daten</p>
+      </article>
+
+      <article class="summary-card" id="phase2-card">
+        <h2 data-i18n="summary.phase2">Phase 2 Quiz</h2>
+        <p class="metric" id="phase2-score">-</p>
+        <p class="detail" id="phase2-detail" data-i18n="summary.noData">Keine Daten</p>
+      </article>
+    </div>
+
+    <div class="total-box">
+      <span data-i18n="summary.totalLabel">Gesamtwert</span>
+      <strong id="overall-score">-</strong>
+    </div>
+
+    <div class="summary-actions">
+      <button class = "std-btn" id="home-btn" data-i18n="summary.home">Back to Start</button>
+      <button class="std-btn" id="learn-more-btn" data-i18n="summary.learnMore">Erfahre mehr ueber Imagegeneration</button>
+    </div>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="phase-summary.js"></script>
+</body>
+</html>

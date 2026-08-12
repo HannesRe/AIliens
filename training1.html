@@ -1,0 +1,136 @@
+<!-- Training page based on quiz template -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f0c29">
+  <title>training1</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="pwa-icon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel ="stylesheet" href="numbered_list.css">
+  <link rel ="stylesheet" href="quiz-style.css">
+  <link rel="stylesheet" href="training.css">
+  <link rel="stylesheet" href="ai_agent.css">
+</head>
+<body class="training-page">
+  <div class="container animate__animated animate__fadeIn" id="phase-intro-1">
+        <div class="title-box">
+          <span data-i18n="training.phase1.title">The Face</span>
+      <h1 data-i18n="training.phase1.subtitle" class="animate__animated animate__bounceIn">The Face</h1>
+      <div class="pulse-circle"></div>
+    </div>
+    <div class="steps-container">
+      <div class="agent-callout-small" aria-label="Game assistant message">
+        <img src="Agent_MIB.png" alt="Game agent" class="agent-image">
+        <div class="speech-bubble" data-i18n="training.phase1.agentMessage"></div>
+      </div>
+      <div class="step-card animate__animated animate__fadeInUp">
+        <div class="step-card-header">
+          <h3 data-i18n="training.phase1.step1.title">Licht, Schatten und Reflexionen</h3>
+          <!-- <button class="toggle-image-btn" data-step="1">▼</button> -->
+        </div>
+        <p data-i18n="training.phase1.step1.body">Kontrolliere, ob Lichteinstrahlung gleichmäßig ist und die Schatten dazu passen. Passen alle Reflektionen zu den Lichtverhältnissen?</p>
+        <div class="step-image-container" style="display: none;">
+          <img src="" alt="Step 1 example" class="step-example-image">
+        </div>
+      </div>
+      <div class="step-card animate__animated animate__fadeInUp">
+        <div class="step-card-header">
+          <h3 data-i18n="training.phase1.step2.title">Details</h3>
+          <!-- <button class="toggle-image-btn" data-step="2">▼</button> -->
+        </div>
+        <p data-i18n="training.phase1.step2.body">Haben Zähne, Augen und Haut klar definierte Details undKonturen? Oder wirken sie schwammig und verzogen?</p>
+        <div class="step-image-container" style="display: none;">
+          <img src="" alt="Step 2 example" class="step-example-image">
+        </div>
+      </div>
+      <div class="step-card animate__animated animate__fadeInUp">
+        <div class="step-card-header">
+          <h3 data-i18n="training.phase1.step3.title">Symmetrie</h3>
+          <!-- <button class="toggle-image-btn" data-step="3">▼</button> -->
+        </div>
+        <p data-i18n="training.phase1.step3.body">Sind Merkmale, wie Augen und Ohren symmetrisch?</p>
+        <div class="step-image-container" style="display: none;">
+          <img src="" alt="Step 3 example" class="step-example-image">
+        </div>
+      </div>
+      <div class="step-card animate__animated animate__fadeInUp">
+        <div class="step-card-header">
+          <h3 data-i18n="training.phase1.step4.title">Übergang</h3>
+            <!-- <button class="toggle-image-btn" data-step="4">▼</button> -->
+        </div>
+        <p data-i18n="training.phase1.step4.body">Fallen die Haare natürlich? Trennen sie sich klar vom Hintergrund ab. Fallen sie normal oder gehen sie z.B durch die Ohren?</p>
+        <div class="step-image-container" style="display: none;">
+          <img src="" alt="Step 4 example" class="step-example-image">
+        </div>
+      </div>
+    </div>
+
+    <button class="std-btn" id="start-phase-1-btn" data-i18n="training.phase1.start">Phase 1 starten</button>
+  </div>
+  
+
+  <div class="container animate__animated animate__fadeIn is-hidden" id="phase-intro-2" style="display: none;">
+    <div class="title-box">
+      <h1 class="animate__animated animate__bounceIn"><span>Phase 2 </span>Background & Textures</h1>
+      <div class="pulse-circle"></div>
+    </div>
+
+    <div class="steps-container">
+       <div class="agent-callout-small" aria-label="Game assistant message">
+      <img src="Agent_MIB.png" alt="Game agent" class="agent-image">
+      <div class="speech-bubble" data-i18n="training.phase2.agentMessage"></div>
+    </div>
+    
+      <div class="step-card animate__animated animate__fadeInUp">
+        <h3 data-i18n="training.phase2.step1.title">Wirbel</h3>
+        <p data-i18n="training.phase2.step1.body">Suche nach unnatürlichen oder verzerrten Formen, die auf künstliche Erstellung hinweisen könnten. Besonders am Übergang zum Vordergrund.</p>
+      </div>
+      <div class="step-card animate__animated animate__fadeInUp">
+        <h3 data-i18n="training.phase2.step2.title">Texturen</h3>
+        <p data-i18n="training.phase2.step2.body">Wirken die Texturen von Stoff und anderen Materialien im Hintergrund echt oder wirken sie verzerrt oder verschwommen?</p>
+      </div>
+      <div class="step-card animate__animated animate__fadeInUp">
+        <h3 data-i18n="training.phase2.step3.title">Konsistenz bei Linien und Formen</h3>
+        <p data-i18n="training.phase2.step3.body">Sind Formen im Hintergrund konsistent? Gehen diese gerade von einer Seite auf die andere? Bleiben Winkel gleich?</p>
+      </div>
+    </div>
+
+    <button class="std-btn" id="start-phase-2-btn" data-i18n="training.phase2.start">Phase 2 starten</button>
+  </div>
+
+  <div class="quiz-container is-hidden" id="training-quiz-container" style="display: none;">
+     <div class="agent-callout-small" aria-label="Game assistant message">
+      <img src="Agent_MIB.png" alt="Game agent" class="agent-image">
+      <div class="speech-bubble" id="training-step-info"></div>
+    </div>
+    <img id="quiz-image" src="" alt="Quiz Image">
+
+    <div class="buttons-container training-answer-container" id="answer-container">
+      <button class="answer-btn training-answer-btn" id="real-btn" data-i18n="quiz.real">Real</button>
+      <button class="std-btn training-answer-btn" id="hint-btn" data-i18n="training.hintButton">💡 Hinweis</button>
+      <button class="answer-btn training-answer-btn" id="fake-btn" data-i18n="quiz.fake">Fake</button>
+      <button class="std-btn training-answer-btn" id="continue-btn" data-i18n="training.continue" style="display: none;">Continue</button>
+    </div>
+  </div>
+
+     <div class="result-container training-complete-panel"  id="training-complete-panel" style="display: none;">
+              <h2 class="training-complete-title" data-i18n="training.complete.title">Training Complete</h2>
+              <div class="agent-callout" aria-label="Game assistant message">
+                <img src="Agent_MIB.png" alt="Game agent" class="agent-image">
+                <div class="speech-bubble" data-i18n="training.finished.agentMessage"></div>
+              </div>
+            <p class="training-complete-text"><span data-i18n="training.complete.correct">Correct</span>: <strong id="training-complete-correct">0/0</strong></p>
+            <p class="training-complete-text"><span data-i18n="training.complete.accuracy">Accuracy</span>: <strong id="training-complete-accuracy">0%</strong></p>
+            <div class="end-container training-complete-actions">
+              <button class="std_btn" id="go-quiz-btn" data-i18n="training.complete.goQuiz">Zur Quiz-Seite</button>
+            </div>
+        </div>
+
+        <script src="i18n.js"></script>
+  <script src="training.js"></script>
+</body>
+</html>

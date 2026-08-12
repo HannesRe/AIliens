@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Real or Fake app icon maskable">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f0c29"/>
+      <stop offset="100%" stop-color="#302b63"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff8a00"/>
+      <stop offset="100%" stop-color="#e52e71"/>
+    </linearGradient>
+  </defs>
+  <rect x="32" y="32" width="448" height="448" rx="96" fill="url(#bg)"/>
+  <path d="M90 378L378 90h44c0 0-56 116-172 232S90 378 90 378Z" fill="url(#accent)" opacity="0.92"/>
+  <circle cx="240" cy="248" r="112" fill="rgba(255,255,255,0.14)" stroke="rgba(255,255,255,0.75)" stroke-width="12"/>
+  <circle cx="240" cy="248" r="36" fill="#fff"/>
+  <circle cx="240" cy="248" r="15" fill="#0f0c29"/>
+</svg>
