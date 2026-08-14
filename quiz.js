@@ -211,12 +211,14 @@ function initializeImageSet() {
     
     // Create separate arrays for R and F folder images
     const allRImages = Array.from({length: totalImages}, (_, i) => ({
-        path: `${imageFolder}/R/${i+1}.png`,
+        path: `${imageFolder}/R/${i+1}.jpg`,
+        fallbackPath: `${imageFolder}/R/${i+1}.png`,
         answer: "Real"
     }));
     
     const allFImages = Array.from({length: totalImages}, (_, i) => ({
-        path: `${imageFolder}/F/${i+1}.png`,
+        path: `${imageFolder}/F/${i+1}.jpg`,
+        fallbackPath: `${imageFolder}/F/${i+1}.png`,
         answer: "Fake"
     }));
     
@@ -358,8 +360,16 @@ function updateQuestion() {
     
     // Load and display the current image
     if (imageSet && imageSet.length > 0 && currentQuestionIndex < imageSet.length) {
-        document.getElementById("quiz-image").src = imageSet[currentQuestionIndex].path;
-        console.log("Loading image:", imageSet[currentQuestionIndex].path);
+        const currentImage = imageSet[currentQuestionIndex];
+        const quizImage = document.getElementById("quiz-image");
+
+        quizImage.onerror = function () {
+            quizImage.onerror = null;
+            quizImage.src = currentImage.fallbackPath;
+            console.log("PNG not found, loading JPG:", currentImage.fallbackPath);
+        };
+        quizImage.src = currentImage.path;
+        console.log("Loading image:", currentImage.path);
     } else {
         console.error("Image not available for question:", currentQuestionIndex);
     }
